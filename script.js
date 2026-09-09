@@ -168,9 +168,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ---------- Contact form validation (client-side) ---------- */
+  /* ---------- Contact form validation + EmailJS integration ---------- */
   const form = document.getElementById('contactForm');
   const formStatus = document.getElementById('formStatus');
+  const submitButton = form.querySelector('button[type="submit"]');
+  const submitButtonHTML = submitButton.innerHTML;
+
+  // Update these three values after creating your EmailJS account and template.
+  const EMAILJS_CONFIG = {
+    publicKey: 'jdhKrf5ukWoK143rn',
+    serviceId: 'service_z4alc7k',
+    templateId: 'template_pynz6vx'
+  };
 
   function setError(fieldId, message) {
     const row = document.getElementById(fieldId).closest('.form-row');
@@ -179,11 +188,31 @@ document.addEventListener('DOMContentLoaded', () => {
     errorEl.textContent = message || '';
   }
 
+  function setStatus(message, isError = false) {
+    formStatus.textContent = message;
+    formStatus.classList.toggle('error', isError);
+  }
+
   function isValidEmail(value) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
   }
 
-  form.addEventListener('submit', (e) => {
+  function isEmailJsConfigured() {
+    return (
+      EMAILJS_CONFIG.publicKey &&
+      EMAILJS_CONFIG.publicKey !== 'YOUR_PUBLIC_KEY' &&
+      EMAILJS_CONFIG.serviceId &&
+      EMAILJS_CONFIG.serviceId !== 'YOUR_SERVICE_ID' &&
+      EMAILJS_CONFIG.templateId &&
+      EMAILJS_CONFIG.templateId !== 'YOUR_TEMPLATE_ID'
+    );
+  }
+
+  if (typeof emailjs !== 'undefined' && isEmailJsConfigured()) {
+    emailjs.init({ publicKey: EMAILJS_CONFIG.publicKey });
+  }
+
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const name = form.name.value.trim();
     const email = form.email.value.trim();
@@ -197,14 +226,39 @@ document.addEventListener('DOMContentLoaded', () => {
     setError('message', message ? '' : (valid = false, 'Please write a message.'));
 
     if (!valid) {
-      formStatus.textContent = 'Please fix the highlighted fields.';
-      formStatus.classList.add('error');
+      setStatus('Please fix the highlighted fields.', true);
       return;
     }
 
-    formStatus.classList.remove('error');
-    formStatus.textContent = `Thanks, ${name.split(' ')[0]}! This form needs a backend (e.g. Formspree, EmailJS, or a small API) wired up to actually deliver to ejuma670@gmail.com — for now, please email directly.`;
-    form.reset();
+    if (typeof emailjs === 'undefined') {
+      setStatus('EmailJS failed to load. Check your internet connection and refresh the page.', true);
+      return;
+    }
+
+    if (!isEmailJsConfigured()) {
+      setStatus('Set your EmailJS Public Key, Service ID, and Template ID in script.js before sending the form.', true);
+      return;
+    }
+
+    submitButton.disabled = true;
+    submitButton.innerHTML = '<i class="fa-solid fa-spinner fa-spin" aria-hidden="true"></i> Sending...';
+    setStatus('Sending your message...');
+
+    try {
+      await emailjs.sendForm(EMAILJS_CONFIG.serviceId, EMAILJS_CONFIG.templateId, form, {
+        publicKey: EMAILJS_CONFIG.publicKey
+      });
+
+      setStatus(`Thanks, ${name.split(' ')[0]}! Your message was sent successfully.`);
+      form.reset();
+      ['name', 'email', 'subject', 'message'].forEach((fieldId) => setError(fieldId, ''));
+    } catch (error) {
+      console.error('EmailJS send error:', error);
+      setStatus('Something went wrong while sending your message. Please try again or email ejuma670@gmail.com directly.', true);
+    } finally {
+      submitButton.disabled = false;
+      submitButton.innerHTML = submitButtonHTML;
+    }
   });
 
   /* ---------- Lightweight canvas particle network (background) ---------- */
