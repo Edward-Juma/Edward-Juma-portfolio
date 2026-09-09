@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edward Juma — IT Support Specialist &amp; Aspiring Cybersecurity Engineer</title>
+  <meta name="description" content="Edward Juma is a Computer Science graduate and IT Support Specialist based in Nairobi, Kenya, specializing in networking, system administration, and web development, with a long-term focus on cybersecurity engineering." />
+  <meta name="keywords" content="Edward Juma, IT Support Specialist, Network Technician, Cybersecurity Engineer, Nairobi Kenya, Computer Science Graduate, Web Developer" />
+  <meta name="author" content="Edward Juma" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://edwardjuma.dev/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Edward Juma — IT Support Specialist &amp; Aspiring Cybersecurity Engineer" />
+  <meta property="og:description" content="Computer Science graduate specializing in IT support, networking, and system administration, based in Nairobi, Kenya." />
+  <meta property="og:image" content="assets/images/og-cover.jpg" />
+  <meta property="og:url" content="https://edwardjuma.dev/" />
+  <meta property="og:locale" content="en_KE" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Edward Juma — IT Support Specialist &amp; Aspiring Cybersecurity Engineer" />
+  <meta name="twitter:description" content="Computer Science graduate specializing in IT support, networking, and system administration." />
+  <meta name="twitter:image" content="assets/images/og-cover.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+
+  <!-- Preconnects for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
+  <!-- Fonts: Space Grotesk (display/technical) + Inter (body) -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Structured data: Person schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Edward Juma",
+    "jobTitle": "IT Support Specialist",
+    "description": "Computer Science graduate specializing in IT support, computer networking, and system administration, with a long-term focus on cybersecurity engineering.",
+    "url": "https://edwardjuma.dev/",
+    "email": "mailto:ejuma670@gmail.com",
+    "telephone": "+254799514830",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lower Kabete, Nairobi",
+      "addressCountry": "KE"
+    },
+    "sameAs": [
+      "https://linkedin.com/in/edward-juma",
+      "https://github.com/Edward-Juma"
+    ],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "University of Nairobi"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Loading screen -->
+  <div id="loader" aria-hidden="true">
+    <div class="loader-mark">
+      <span class="loader-bracket">&lt;</span>
+      <span class="loader-name">EDWARD JUMA</span>
+      <span class="loader-bracket">/&gt;</span>
+    </div>
+  </div>
+
+  <!-- Background canvas (lightweight custom particle network) -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- Scroll progress indicator -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary">
+      <a href="#top" class="nav-logo" aria-label="Edward Juma, home">
+        <span class="logo-mark">EJ</span>
+        <span class="logo-text">Edward Juma</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-toggle" aria-label="Switch to light mode" aria-pressed="false">
+          <i class="fa-solid fa-moon" aria-hidden="true"></i>
+          <i class="fa-solid fa-sun" aria-hidden="true"></i>
+        </button>
+        <a href="#contact" class="btn btn-primary btn-sm nav-cta">Let's talk</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section id="top" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content" data-reveal>
+          <p class="hero-eyebrow">
+            <span class="status-dot" aria-hidden="true"></span>
+            Available immediately — Nairobi, Kenya
+          </p>
+          <h1 class="hero-title">
+            Edward Juma builds and secures the systems people rely on.
+          </h1>
+          <p class="hero-role">
+            <span id="typed-role"></span><span class="typed-cursor" aria-hidden="true">|</span>
+          </p>
+          <p class="hero-desc">
+            Computer Science graduate from Nairobi who spent his industrial attachment keeping a university's
+            network and end users running — now building toward a career in cybersecurity engineering, one
+            certification and one late-night lab at a time.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">
+              <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Get in touch
+            </a>
+            <a href="assets/Edward-Juma-Resume.pdf" class="btn btn-ghost" download>
+              <i class="fa-solid fa-arrow-down-to-line" aria-hidden="true"></i> Download résumé
+            </a>
+          </div>
+          <div class="hero-meta">
+            <a href="https://github.com/Edward-Juma" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="fa-brands fa-github"></i></a>
+            <a href="https://linkedin.com/in/edward-juma" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:ejuma670@gmail.com" aria-label="Send an email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="tel:+254799514830" aria-label="Call Edward"><i class="fa-solid fa-phone"></i></a>
+          </div>
+        </div>
+
+        <div class="hero-visual" data-reveal>
+          <div class="terminal-window" role="img" aria-label="Terminal window showing a mock system status check">
+            <div class="terminal-bar">
+              <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+              <span class="terminal-title">edward:~</span>
+            </div>
+            <div class="terminal-body" id="terminalBody">
+              <p><span class="prompt">$</span> whoami</p>
+              <p class="output">edward_juma — it_support / network_tech</p>
+              <p><span class="prompt">$</span> cat focus.txt</p>
+              <p class="output">Networking · Sys Admin · Web Dev → Cybersecurity</p>
+              <p><span class="prompt">$</span> ping career-goals --continuous</p>
+              <p class="output success">64 bytes from cybersecurity: growth=∞ time=ongoing</p>
+              <p class="cursor-line"><span class="prompt">$</span> <span class="blink-cursor">▍</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-indicator" aria-label="Scroll to About section">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    <section class="stats-band" aria-label="Career highlights">
+      <div class="container stats-grid">
+        <div class="stat" data-reveal>
+          <span class="stat-number" data-count="6">0</span><span class="stat-suffix">+</span>
+          <p class="stat-label">Months hands-on ICT support</p>
+        </div>
+        <div class="stat" data-reveal>
+          <span class="stat-number" data-count="5">0</span>
+          <p class="stat-label">Projects shipped</p>
+        </div>
+        <div class="stat" data-reveal>
+          <span class="stat-number" data-count="10">0</span><span class="stat-suffix">+</span>
+          <p class="stat-label">Technologies &amp; tools</p>
+        </div>
+        <div class="stat" data-reveal>
+          <span class="stat-number" data-count="1">0</span>
+          <p class="stat-label">University ICT department served</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section">
+      <div class="container about-grid">
+        <div class="section-heading" data-reveal>
+          <h2>About</h2>
+          <div class="heading-rule" aria-hidden="true"></div>
+        </div>
+
+        <div class="about-body" data-reveal>
+          <p>
+            I'm a Computer Science graduate with hands-on strength in IT support, computer networking,
+            troubleshooting, and system administration, plus a working web development skillset I use to build
+            real sites for real clients.
+          </p>
+          <p>
+            During my industrial attachment I worked inside the ICT department at the <strong>University of
+            Nairobi</strong>, supporting staff and students directly — fixing hardware, resolving software issues,
+            maintaining the LAN, and keeping day-to-day operations running without drama. That environment taught
+            me more about production systems than any classroom could.
+          </p>
+          <p>
+            My long-term goal is to become a cybersecurity engineer. I'm building toward that deliberately:
+            deepening my networking fundamentals, spending time in Linux, and working through the certification
+            path that leads there. In the meantime, I'm dependable, quick to learn, and I enjoy the kind of
+            problem that only shows itself once you start digging.
+          </p>
+
+          <div class="about-tags" aria-label="Working style">
+            <span class="tag">Hardworking</span>
+            <span class="tag">Quick learner</span>
+            <span class="tag">Dependable</span>
+            <span class="tag">Adaptable</span>
+            <span class="tag">Team player</span>
+          </div>
+        </div>
+
+        <aside class="about-card glass-card" data-reveal aria-label="Quick facts">
+          <ul class="fact-list">
+            <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Lower Kabete, Nairobi, Kenya</li>
+            <li><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Diploma in Computer Science</li>
+            <li><i class="fa-solid fa-building-columns" aria-hidden="true"></i> University of Nairobi — ICT Dept.</li>
+            <li><i class="fa-solid fa-bullseye" aria-hidden="true"></i> Goal: Cybersecurity Engineer</li>
+            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Available immediately</li>
+          </ul>
+          <a href="assets/Edward_Juma_ICT_Support_CV.pdf" class="btn btn-outline btn-block" download>
+            <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i> Download full résumé
+          </a>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS / TECH STACK ============ -->
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <div class="section-heading" data-reveal>
+          <h2>Skills &amp; tech stack</h2>
+          <div class="heading-rule" aria-hidden="true"></div>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-card glass-card" data-reveal>
+            <div class="skill-card-head">
+              <i class="fa-solid fa-code" aria-hidden="true"></i>
+              <h3>Programming</h3>
+            </div>
+            <ul class="skill-bars">
+              <li><span>HTML5 &amp; CSS3</span><div class="bar"><i style="--level:92%"></i></div></li>
+              <li><span>JavaScript</span><div class="bar"><i style="--level:80%"></i></div></li>
+              <li><span>Python</span><div class="bar"><i style="--level:75%"></i></div></li>
+              <li><span>Java</span><div class="bar"><i style="--level:70%"></i></div></li>
+              <li><span>SQL / MySQL</span><div class="bar"><i style="--level:72%"></i></div></li>
+              <li><span>C++ &amp; VB.NET</span><div class="bar"><i style="--level:60%"></i></div></li>
+            </ul>
+          </div>
+
+          <div class="skill-card glass-card" data-reveal>
+            <div class="skill-card-head">
+              <i class="fa-solid fa-network-wired" aria-hidden="true"></i>
+              <h3>Networking</h3>
+            </div>
+            <ul class="skill-bars">
+              <li><span>TCP/IP &amp; Subnetting</span><div class="bar"><i style="--level:82%"></i></div></li>
+              <li><span>LAN / WAN</span><div class="bar"><i style="--level:85%"></i></div></li>
+              <li><span>Routing &amp; Switching basics</span><div class="bar"><i style="--level:75%"></i></div></li>
+              <li><span>Network troubleshooting</span><div class="bar"><i style="--level:88%"></i></div></li>
+            </ul>
+          </div>
+
+          <div class="skill-card glass-card" data-reveal>
+            <div class="skill-card-head">
+              <i class="fa-solid fa-server" aria-hidden="true"></i>
+              <h3>Systems &amp; support</h3>
+            </div>
+            <ul class="skill-bars">
+              <li><span>Windows administration</span><div class="bar"><i style="--level:88%"></i></div></li>
+              <li><span>Linux</span><div class="bar"><i style="--level:70%"></i></div></li>
+              <li><span>Active Directory basics</span><div class="bar"><i style="--level:65%"></i></div></li>
+              <li><span>Hardware troubleshooting</span><div class="bar"><i style="--level:90%"></i></div></li>
+              <li><span>Microsoft 365 / Office</span><div class="bar"><i style="--level:90%"></i></div></li>
+            </ul>
+          </div>
+
+          <div class="skill-card glass-card" data-reveal>
+            <div class="skill-card-head">
+              <i class="fa-solid fa-toolbox" aria-hidden="true"></i>
+              <h3>Tools &amp; collaboration</h3>
+            </div>
+            <ul class="skill-bars">
+              <li><span>Git &amp; GitHub</span><div class="bar"><i style="--level:78%"></i></div></li>
+              <li><span>VS Code</span><div class="bar"><i style="--level:90%"></i></div></li>
+              <li><span>Chrome DevTools</span><div class="bar"><i style="--level:80%"></i></div></li>
+              <li><span>Communication &amp; customer service</span><div class="bar"><i style="--level:92%"></i></div></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tech-marquee" data-reveal aria-label="Technology logos">
+          <div class="marquee-track">
+            <span><i class="fa-brands fa-html5"></i> HTML5</span>
+            <span><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+            <span><i class="fa-brands fa-js"></i> JavaScript</span>
+            <span><i class="fa-brands fa-python"></i> Python</span>
+            <span><i class="fa-brands fa-java"></i> Java</span>
+            <span><i class="fa-solid fa-database"></i> MySQL</span>
+            <span><i class="fa-brands fa-linux"></i> Linux</span>
+            <span><i class="fa-brands fa-windows"></i> Windows</span>
+            <span><i class="fa-brands fa-git-alt"></i> Git</span>
+            <span><i class="fa-brands fa-github"></i> GitHub</span>
+            <!-- duplicate set for seamless loop -->
+            <span><i class="fa-brands fa-html5"></i> HTML5</span>
+            <span><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+            <span><i class="fa-brands fa-js"></i> JavaScript</span>
+            <span><i class="fa-brands fa-python"></i> Python</span>
+            <span><i class="fa-brands fa-java"></i> Java</span>
+            <span><i class="fa-solid fa-database"></i> MySQL</span>
+            <span><i class="fa-brands fa-linux"></i> Linux</span>
+            <span><i class="fa-brands fa-windows"></i> Windows</span>
+            <span><i class="fa-brands fa-git-alt"></i> Git</span>
+            <span><i class="fa-brands fa-github"></i> GitHub</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE / TIMELINE ============ -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-heading" data-reveal>
+          <h2>Experience</h2>
+          <div class="heading-rule" aria-hidden="true"></div>
+        </div>
+
+        <ol class="timeline">
+          <li class="timeline-item" data-reveal>
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card glass-card">
+              <p class="timeline-date">Industrial Attachment</p>
+              <h3>ICT Support Technician</h3>
+              <p class="timeline-org">University of Nairobi — ICT Department</p>
+              <ul class="timeline-list">
+                <li>Provided front-line IT support and computer troubleshooting for staff and students</li>
+                <li>Installed and configured software, and administered Windows workstations</li>
+                <li>Configured network printers and resolved LAN connectivity issues</li>
+                <li>Carried out hardware maintenance and supported ICT inventory tracking</li>
+                <li>Assisted with general ICT operations across the department</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline-item" data-reveal>
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card glass-card">
+              <p class="timeline-date">Ongoing</p>
+              <h3>Diploma in Computer Science</h3>
+              <p class="timeline-org">Certificate awaiting issuance</p>
+              <ul class="timeline-list">
+                <li>Core coursework spanning programming, networking, and systems</li>
+                <li>Completed industrial attachment as part of the diploma program</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="timeline-item" data-reveal>
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card glass-card">
+              <p class="timeline-date">In progress</p>
+              <h3>Cybersecurity self-study track</h3>
+              <p class="timeline-org">Independent study</p>
+              <ul class="timeline-list">
+                <li>Deepening Linux, subnetting, DNS/DHCP, and Active Directory fundamentals</li>
+                <li>Working toward a certification path (Security+ and beyond)</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section id="projects" class="section section-alt">
+      <div class="container">
+        <div class="section-heading" data-reveal>
+          <h2>Projects</h2>
+          <div class="heading-rule" aria-hidden="true"></div>
+        </div>
+
+        <div class="project-filters" data-reveal role="tablist" aria-label="Filter projects">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="filter-btn" data-filter="web" role="tab" aria-selected="false">Web</button>
+          <button class="filter-btn" data-filter="backend" role="tab" aria-selected="false">Backend</button>
+          <button class="filter-btn" data-filter="tools" role="tab" aria-selected="false">Tools</button>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+
+          <article class="project-card glass-card" data-category="web" data-reveal>
+            <div class="project-thumb" style="--grad-a:var(--primary); --grad-b:var(--accent);">
+              <i class="fa-solid fa-utensils" aria-hidden="true"></i>
+            </div>
+            <div class="project-body">
+              <h3>La Paz Restaurant Website</h3>
+              <p>A modern restaurant site with an interactive menu, table reservations, Google Maps integration,
+                and direct ordering through WhatsApp, Glovo, and Bolt Food.</p>
+              <div class="project-tags">
+                <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="link-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live demo</a>
+                <a href="https://github.com/Edward-Juma" target="_blank" rel="noopener noreferrer" class="link-btn"><i class="fa-brands fa-github"></i> Source</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass-card" data-category="web" data-reveal>
+            <div class="project-thumb" style="--grad-a:var(--secondary); --grad-b:var(--primary);">
+              <i class="fa-solid fa-id-card" aria-hidden="true"></i>
+            </div>
+            <div class="project-body">
+              <h3>Personal Portfolio Website</h3>
+              <p>A responsive personal portfolio with dark mode, scroll animations, a project showcase, and a
+                working contact form.</p>
+              <div class="project-tags">
+                <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="link-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live demo</a>
+                <a href="https://github.com/Edward-Juma" target="_blank" rel="noopener noreferrer" class="link-btn"><i class="fa-brands fa-github"></i> Source</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass-card" data-category="backend" data-reveal>
+            <div class="project-thumb" style="--grad-a:var(--accent); --grad-b:var(--secondary);">
+              <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
+            </div>
+            <div class="project-body">
+              <h3>Restaurant Booking Backend</h3>
+              <p>A Flask REST API handling table booking management, email notifications, and input validation
+                for a restaurant reservation system.</p>
+              <div class="project-tags">
+                <span>Python</span><span>Flask</span><span>REST API</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Edward-Juma" target="_blank" rel="noopener noreferrer" class="link-btn"><i class="fa-brands fa-github"></i> Source</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass-card" data-category="tools" data-reveal>
+            <div class="project-thumb" style="--grad-a:var(--primary); --grad-b:var(--secondary);">
+              <i class="fa-solid fa-calculator" aria-hidden="true"></i>
+            </div>
+            <div class="project-body">
+              <h3>Calculator Web App</h3>
+              <p>A responsive calculator built with vanilla JavaScript, handling standard arithmetic operations
+                with a clean, touch-friendly interface.</p>
+              <div class="project-tags">
+                <span>JavaScript</span><span>CSS3</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="link-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live demo</a>
+                <a href="https://github.com/Edward-Juma" target="_blank" rel="noopener noreferrer" class="link-btn"><i class="fa-brands fa-github"></i> Source</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass-card" data-category="tools" data-reveal>
+            <div class="project-thumb" style="--grad-a:var(--secondary); --grad-b:var(--accent);">
+              <i class="fa-solid fa-pen-to-square" aria-hidden="true"></i>
+            </div>
+            <div class="project-body">
+              <h3>Content Editor</h3>
+              <p>A lightweight, browser-based content editor built with HTML, CSS, and jQuery for quick
+                rich-text editing.</p>
+              <div class="project-tags">
+                <span>HTML</span><span>CSS</span><span>jQuery</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Edward-Juma" target="_blank" rel="noopener noreferrer" class="link-btn"><i class="fa-brands fa-github"></i> Source</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-heading" data-reveal>
+          <h2>Services</h2>
+          <div class="heading-rule" aria-hidden="true"></div>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card glass-card" data-reveal>
+            <i class="fa-solid fa-headset" aria-hidden="true"></i>
+            <h3>IT support</h3>
+            <p>Day-to-day technical support for individuals and small teams — from software issues to system setup.</p>
+          </div>
+          <div class="service-card glass-card" data-reveal>
+            <i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i>
+            <h3>Computer repair</h3>
+            <p>Diagnosis and repair of hardware and software faults on desktops and laptops.</p>
+          </div>
+          <div class="service-card glass-card" data-reveal>
+            <i class="fa-solid fa-network-wired" aria-hidden="true"></i>
+            <h3>Network troubleshooting</h3>
+            <p>LAN setup, connectivity diagnostics, and network performance fixes for homes and offices.</p>
+          </div>
+          <div class="service-card glass-card" data-reveal>
+            <i class="fa-solid fa-globe" aria-hidden="true"></i>
+            <h3>Website development</h3>
+            <p>Responsive, modern websites built to represent a business or brand properly online.</p>
+          </div>
+          <div class="service-card glass-card" data-reveal>
+            <i class="fa-solid fa-comments" aria-hidden="true"></i>
+            <h3>Technical consulting</h3>
+            <p>Practical advice on system setup, tooling choices, and getting infrastructure right from the start.</p>
+          </div>
+          <div class="service-card glass-card" data-reveal>
+            <i class="fa-solid fa-download" aria-hidden="true"></i>
+            <h3>System &amp; software installation</h3>
+            <p>Clean installs and configuration of operating systems, software, and routine maintenance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ACHIEVEMENTS / CERTIFICATIONS ============ -->
+    <section id="achievements" class="section section-alt">
+      <div class="container achievements-grid">
+        <div class="section-heading" data-reveal>
+          <h2>Achievements &amp; certifications</h2>
+          <div class="heading-rule" aria-hidden="true"></div>
+        </div>
+
+        <div class="achievement-cards">
+          <div class="achievement-card glass-card" data-reveal>
+            <i class="fa-solid fa-certificate" aria-hidden="true"></i>
+            <h3>Diploma in Computer Science</h3>
+            <p>Certificate awaiting issuance</p>
+          </div>
+          <div class="achievement-card glass-card" data-reveal>
+            <i class="fa-solid fa-award" aria-hidden="true"></i>
+            <h3>Industrial Attachment Completion</h3>
+            <p>University of Nairobi — ICT Department</p>
+          </div>
+          <div class="achievement-card glass-card" data-reveal>
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+            <h3>Recommendation, Director of ICT</h3>
+            <p>University of Nairobi</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS (placeholder) ============ -->
+    <section id="testimonials" class="section" aria-label="Testimonials">
+      <div class="container">
+        <div class="section-heading" data-reveal>
+          <h2>What people say</h2>
+          <div class="heading-rule" aria-hidden="true"></div>
+        </div>
+        <!-- Placeholder section — replace with real testimonials as they come in -->
+        <div class="testimonials-grid">
+          <blockquote class="testimonial-card glass-card placeholder" data-reveal>
+            <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+            <p>Testimonials from supervisors and clients will appear here soon.</p>
+            <footer>— Add your first testimonial</footer>
+          </blockquote>
+          <blockquote class="testimonial-card glass-card placeholder" data-reveal>
+            <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+            <p>Space reserved for feedback from a colleague or client.</p>
+            <footer>— Add your second testimonial</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section section-alt">
+      <div class="container contact-grid">
+        <div class="section-heading" data-reveal>
+          <h2>Contact</h2>
+          <div class="heading-rule" aria-hidden="true"></div>
+          <p class="contact-intro">Open to full-time roles, internships, and graduate trainee programs in IT
+            support, networking, telecommunications, and cybersecurity. Based in Nairobi and available
+            immediately.</p>
+        </div>
+
+        <div class="contact-info" data-reveal>
+          <a class="contact-item" href="tel:+254799514830">
+            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+            <div><span>Phone</span><p>0799 514 830</p></div>
+          </a>
+          <a class="contact-item" href="mailto:ejuma670@gmail.com">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            <div><span>Email</span><p>ejuma670@gmail.com</p></div>
+          </a>
+          <a class="contact-item" href="https://github.com/Edward-Juma" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+            <div><span>GitHub</span><p>github.com/Edward-Juma</p></div>
+          </a>
+          <a class="contact-item" href="https://linkedin.com/in/edward-juma" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+            <div><span>LinkedIn</span><p>linkedin.com/in/edward-juma</p></div>
+          </a>
+          <div class="contact-item">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            <div><span>Location</span><p>Lower Kabete, Nairobi, Kenya</p></div>
+          </div>
+
+          <div class="map-embed">
+            <iframe
+              title="Map of Lower Kabete, Nairobi"
+              src="https://www.google.com/maps?q=Lower+Kabete,+Nairobi,+Kenya&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+
+        <form class="contact-form glass-card" id="contactForm" data-reveal novalidate>
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required autocomplete="name" />
+            <span class="form-error" data-error-for="name"></span>
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="email" />
+            <span class="form-error" data-error-for="email"></span>
+          </div>
+          <div class="form-row">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required />
+            <span class="form-error" data-error-for="subject"></span>
+          </div>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <span class="form-error" data-error-for="message"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">
+            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Send message
+          </button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#top" class="nav-logo">
+          <span class="logo-mark">EJ</span>
+          <span class="logo-text">Edward Juma</span>
+        </a>
+        <p class="footer-tagline">IT Support Specialist · Network Technician · Aspiring Cybersecurity Engineer</p>
+      </div>
+
+      <nav aria-label="Footer">
+        <ul class="footer-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-social">
+        <a href="https://github.com/Edward-Juma" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com/in/edward-juma" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="mailto:ejuma670@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>Designed and developed by Edward Juma. © 2026 All rights reserved.</p>
+      <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+      </button>
+    </div>
+  </footer>
+
+  <a
+    href="https://wa.me/254799514830?text=Hello%20Edward%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect."
+    class="whatsapp-float"
+    aria-label="Chat on WhatsApp"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+  </a>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
