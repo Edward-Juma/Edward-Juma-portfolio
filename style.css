@@ -452,12 +452,47 @@ button { font-family: inherit; cursor: pointer; }
 .achievement-card p { font-size: 0.86rem; }
 
 /* ============ TESTIMONIALS ============ */
-.testimonials-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.6rem; }
-.testimonial-card { padding: 30px; margin: 0; }
-.testimonial-card i { color: var(--secondary); opacity: 0.5; font-size: 1.3rem; margin-bottom: 12px; display: block; }
-.testimonial-card p { font-style: italic; color: var(--text); }
-.testimonial-card footer { margin-top: 14px; font-size: 0.85rem; color: var(--text-muted); }
-.testimonial-card.placeholder { border-style: dashed; }
+.testimonials-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.6rem; }
+.testimonial-card {
+  padding: 30px; margin: 0;
+  border: 1px solid var(--border);
+  transition: border-color 0.25s var(--ease), transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+}
+.testimonial-card:hover {
+  border-color: color-mix(in srgb, var(--secondary) 60%, var(--border));
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(31, 41, 55, 0.12);
+}
+.testimonial-card i {
+  color: var(--secondary);
+  opacity: 0.55;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  display: block;
+}
+.testimonial-card p {
+  margin: 0;
+  font-style: italic;
+  color: var(--text);
+  line-height: 1.7;
+}
+.testimonial-card footer {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.testimonial-author {
+  font-size: 0.94rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.testimonial-role {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
 
 /* ============ CONTACT ============ */
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
