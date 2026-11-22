@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     description: "IT Support · Networking · Full Stack Development",
     images: ["/profile.png"],
   },
-  icons: { icon: "/favicon.svg", shortcut: "/favicon.svg", apple: "/favicon.svg" },
+  icons: { icon: "/edwardlogo.svg", shortcut: "/edwardlogo.svg", apple: "/edwardlogo.svg" },
   robots: {
     index: true,
     follow: true,
